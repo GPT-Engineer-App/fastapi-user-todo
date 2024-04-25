@@ -71,13 +71,6 @@ const Index = () => {
   return (
     <Container maxW="container.md">
       <VStack spacing={4}>
-        <FormControl>
-          <FormLabel>Email</FormLabel>
-          <Input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
-          <Button leftIcon={<FaUserPlus />} mt={2} colorScheme="blue" onClick={createUser}>
-            Add User
-          </Button>
-        </FormControl>
         <Button leftIcon={<FaSearch />} colorScheme="green" onClick={fetchUsers}>
           Load Users
         </Button>
@@ -88,15 +81,6 @@ const Index = () => {
             </ListItem>
           ))}
         </List>
-        <FormControl>
-          <FormLabel>User ID for Todos</FormLabel>
-          <Input value={userId} onChange={(e) => setUserId(e.target.value)} placeholder="Enter User ID" />
-          <FormLabel>Todo Text</FormLabel>
-          <Input value={todoText} onChange={(e) => setTodoText(e.target.value)} placeholder="Enter Todo" />
-          <Button leftIcon={<FaPlus />} mt={2} colorScheme="purple" onClick={createTodo}>
-            Add Todo
-          </Button>
-        </FormControl>
         <Button leftIcon={<FaSearch />} colorScheme="orange" onClick={fetchTodos}>
           Load Todos
         </Button>
